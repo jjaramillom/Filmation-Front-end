@@ -1,6 +1,8 @@
 .matrix {
   display: grid;
+  grid-template-columns: repeat(auto-fit, 15rem);
   justify-content: center;
   justify-items: center;
   row-gap: 2rem;
+  column-gap: 2rem;
 }

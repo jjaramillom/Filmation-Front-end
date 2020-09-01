@@ -20,6 +20,7 @@
     "jsx-quotes": ["error", "prefer-single"],
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-closing-bracket-location": "off",
+    "react/require-default-props": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -35,7 +36,8 @@
     // "linebreak-style": ["warn", "windows"],
     "linebreak-style": "off",
     "arrow-body-style": ["warn", "as-needed"],
-    "no-unused-vars" : ["warn", "all"]
+    "no-unused-vars": ["warn", "all"],
+    "object-curly-newline": "off"
   },
   "settings": {
     "import/resolver": {

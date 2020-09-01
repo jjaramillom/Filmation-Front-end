@@ -1,0 +1,12 @@
+.main {
+  width: 100%;
+  // margin-left: 2rem;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.input {
+  width: fit-content;
+}

@@ -1,1 +1,8 @@
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
+
+$main-blue: #c6d6e670;
+$main-blue-stronger: #a3c7ecf5;
+
+.bg-main {
+  background-color: $main-blue-stronger;
+}

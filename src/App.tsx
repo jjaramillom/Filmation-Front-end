@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.scss';
 
-import Home from './containers/Home/Home';
+import Main from './containers/Main/Main';
 
 function App() {
-  return <Home />;
+  return <Main />;
 }
 
 export default App;

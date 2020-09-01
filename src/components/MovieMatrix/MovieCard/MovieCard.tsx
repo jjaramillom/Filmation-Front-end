@@ -2,24 +2,48 @@
 import React from 'react';
 
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
+
+import classes from './MovieCard.module.scss';
 
 type Props = {
+  onSelected: Function;
   title: string;
-  description: string;
   imageUrl: string;
+  date: string;
+  genres: Array<string>;
 };
 
-const MovieCard = ({ title, description, imageUrl }: Props) => {
+const MovieCard = ({ onSelected, title, imageUrl, date, genres }: Props) => {
+  const genreBadges = genres.map((genre) => (
+    <Badge key={genre} pill variant='primary'>
+      {genre}
+    </Badge>
+  ));
+
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant='top' src={imageUrl} />
-      <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{description}</Card.Text>
-        <Button variant='primary'>Go somewhere</Button>
-      </Card.Body>
-    </Card>
+    <>
+      <Card onClick={() => onSelected()} className={classes.card}>
+        <Card.Img variant='top' src={imageUrl} />
+        {/* <Card.Header className={classes.title}> */}
+        {/* </Card.Header> */}
+        <Card.Body>
+          <div className={classes.card_body}>
+            <div>
+              <p className={classes.title}>{title}</p>
+              <div className={classes.date_text}>{date}</div>
+            </div>
+            {/* <Card.Title>{title}</Card.Title>
+          <Card.Subtitle>{title}</Card.Subtitle>
+          <Card.Text className={classes.description}>{description}</Card.Text>
+          <Button variant='primary' block onClick={() => onSelected()}>
+            More information
+          </Button> */}
+            <div className={classes.badges_container}>{genreBadges}</div>
+          </div>
+        </Card.Body>
+      </Card>
+    </>
   );
 };
 
