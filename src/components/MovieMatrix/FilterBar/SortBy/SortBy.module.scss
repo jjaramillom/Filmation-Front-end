@@ -1,0 +1,12 @@
+.input {
+  width: fit-content;
+}
+
+.sort-button {
+  background-color: #0d5a66;
+  border-color: #0d5a66;
+  &:hover {
+    background-color: #0a3f47;
+    border-color: #0a3f47;
+  }
+}
